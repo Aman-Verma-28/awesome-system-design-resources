@@ -1,3 +1,4 @@
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -32,7 +33,7 @@ public class LeastResponseTime {
 
     public static double simulateResponseTime(String server) {
         // Simulating response time with random delay
-        Random random = new Random();
+        Random random = new SecureRandom();
         double delay = 0.1 + (1.0 - 0.1) * random.nextDouble();
         try {
             Thread.sleep((long) (delay * 1000));
